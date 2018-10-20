@@ -1,0 +1,64 @@
+{
+  "name": "node-typescript-koa",
+  "version": "0.0.1",
+  "description": "REST API using Node.js, Koa, TypeScript, MongoDB",
+  "main": "dist/server.js",
+  "scripts": {
+    "watch": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server.ts",
+    "build-ts": "tsc",
+    "copy-static-assets": "ts-node copyStaticAssets.ts",
+    "tslint": "tslint -c tslint.json -p tsconfig.js",
+    "serve": "node dist/server.js",
+    "build": "npm run tslint && npm run build-ts && npm run copy-static-assets",
+    "start": "npm run serve",
+    "heroku-postbuild": "npm run build"
+  },
+  "engines": {
+    "node": "8.x.x",
+    "npm": "5.x.x"
+  },
+  "author": "Sergey Gavruk",
+  "license": "MIT",
+  "homepage": "https://github.com/gavruk/node-typescript-koa",
+  "keywords": [
+    "typescript",
+    "koa",
+    "rest",
+    "api",
+    "starter",
+    "mongodb"
+  ],
+  "repository": "github:gavruk/node-typescript-koa",
+  "devDependencies": {
+    "@types/dotenv": "^4.0.3",
+    "@types/koa": "2.0.44",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-helmet": "^3.1.2",
+    "@types/koa-jwt": "^3.3.0",
+    "@types/koa-router": "^7.0.28",
+    "@types/koa__cors": "^2.2.2",
+    "@types/mongodb": "^3.1.4",
+    "@types/mongoose": "^5.2.9",
+    "@types/node": "^10.7.0",
+    "@types/shelljs": "^0.8.0",
+    "nodemon": "^1.17.4",
+    "shelljs": "^0.8.2",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.10.0",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "bluebird": "^3.5.2",
+    "class-validator": "^0.9.1",
+    "dotenv": "^6.0.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^4.0.0",
+    "koa-jwt": "^3.3.2",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.2.13",
+    "reflect-metadata": "^0.1.12",
+    "winston": "^3.0.0"
+  }
+}
