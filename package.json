@@ -30,7 +30,9 @@
   ],
   "repository": "github:gavruk/node-typescript-koa",
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/dotenv": "^4.0.3",
+    "@types/jsonwebtoken": "^7.2.8",
     "@types/koa": "2.0.44",
     "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-helmet": "^3.1.2",
@@ -49,9 +51,11 @@
   },
   "dependencies": {
     "@koa/cors": "^2.2.1",
+    "bcrypt": "3.0.2",
     "bluebird": "^3.5.2",
     "class-validator": "^0.9.1",
     "dotenv": "^6.0.0",
+    "jsonwebtoken": "8.3.0",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
     "koa-helmet": "^4.0.0",

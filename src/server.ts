@@ -22,7 +22,7 @@ mongoose.connect(config.databaseUrl, { useNewUrlParser: true })
         app.use(cors());
         app.use(logger());
         app.use(bodyParser());
-        app.use(jwt({ secret: config.jwtSecret }).unless({ path: ['/'] }));
+        app.use(jwt({ secret: config.jwtSecret }).unless({ path: ['/', /^\/auth/] }));
         app.use(router.routes()).use(router.allowedMethods());
 
         app.listen(config.port);
